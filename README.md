@@ -34,11 +34,19 @@ Use `build-all.sh` to build the Vue projects into the native folder.
   To install the application through Overwolf a development account is required. You may find instructions on loading this app [here](https://overwolf.github.io/docs/start/sample-app-overview#5-install-the-app-as-unpacked-extension).
 
 ### Screenshots
+
 _Home Tab_
-![](misc\img\home.png)
+
+![](/misc/img/home.png)
+
 _Statistics Tab_
-![](misc\img\stats.png)
+
+![](/misc/img/stats.png)
+
 _Highlights Tab_
-![](misc\img\highlights.png)
+
+![](/misc/img/highlights.png)
+
 _In-Game Window_
-![](misc\img\in-game.png)
+
+![](/misc/img/in-game.png)
