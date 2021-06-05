@@ -1,40 +1,44 @@
-# Overwolf VUE sample app
 
-This repository contains a sample app that demonstrates some basic points and flows that are relevant when developing Overwolf apps:
+# Summoner Support
 
-- The app will launch automatically when Fornite starts
-- Register to the overwolf.games.events API in order to receive real time events from the game.
-- Define a custom hotkey to be used in-game
-- Based on official OW sample-app https://github.com/overwolf/sample-app
+### Introduction
 
+Summoner Support is a an [Overwolf](https://www.overwolf.com/pages/homepage/) application designed to be used for League of Legends.
+The application will provide amateur and ranked players with features that allow them to get an edge
+over their competition by giving them meaningful statistics and champion guides.
 
-## Do I use yarn or npm ?
+Summoner Support was developed as a a senior design project at California State University, Northridge.
+It is no longer under development. 
 
-**Yarn** plz.
+### Features
 
-## How does this work ?
+Desktop
+* The app will launch automatically when League of Legends starts and Overwolf is running.
+* The statistics tab provides in depth info about your most recent game, as well as general stats for last 15 games.
+* The highlights tab provides video highlights captured from your latest 5 games. 
 
-Each windows is a standalone vue project that build itself in the **`native`** folder that is reserved for :
+In-Game Overlay
+* Item build order for your current champion.
+* Recommended skill order for current champion.
+* See runes all players have equipped(hover for rune description)
+* See previous game stats for all players
 
-- Shared assets such as `css` and `img`
-- Overwolf's required files such as `manifest.json `
+### Project Setup
+The project is set up using Vue.js. Each window is a Vue project that builds into the native folder.
+[Yarn](https://yarnpkg.com/) is required to run this project.
 
-You have to build and run it through Overwolf to test, otherwise overwolf's api is not available and assets loading path is wrong (see improvements list below).
+Use `install.sh` to install install dependencies.
 
-## How install
-Launch `install.sh` script
+Use `build-all.sh` to build the Vue projects into the native folder. 
 
+  To install the application through Overwolf a development account is required. You may find instructions on loading this app [here](https://overwolf.github.io/docs/start/sample-app-overview#5-install-the-app-as-unpacked-extension).
 
-## How build vue into native overwolf folder
-Launch `build-all.sh` script to build all, or` yarn build` into the windows project you want to build.
-
-
-## How to load the app
-Under Overwolf's settings, choose Support tab and then Development options. Click the Load unpacked button and choose the native folder of this repository.
-
-## Improvements
-There is many things to improve :
-
-- Code duplication for headerbar, can be a vue library
-- `yarn serve` cannot be used without using `.env ` files to load css and img from a `public/(css||img)` folder that is a symbolic link to `native/(css||img)`. Without that, design is broken due to `img` and `css` shared folder not loading. We should load asset using an env variable for base path.
-- Probably more things because I'm not perfect.
+### Screenshots
+_Home Tab_
+![](misc\img\home.png)
+_Statistics Tab_
+![](misc\img\stats.png)
+_Highlights Tab_
+![](misc\img\highlights.png)
+_In-Game Window_
+![](misc\img\in-game.png)
